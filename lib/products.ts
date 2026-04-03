@@ -1,0 +1,305 @@
+export type Category = "tops" | "bottoms" | "outerwear" | "dresses" | "accessories" | "shoes";
+export type Style = "streetwear" | "y2k" | "minimalist" | "cottagecore" | "preppy" | "grunge";
+
+export interface Product {
+  id: string;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  category: Category;
+  styles: Style[];
+  image: string;
+  colors: string[];
+  sizes: string[];
+  description: string;
+  trending?: boolean;
+  newArrival?: boolean;
+}
+
+export const products: Product[] = [
+  // Tops
+  {
+    id: "t1",
+    name: "Oversized Graphic Tee",
+    price: 28,
+    originalPrice: 38,
+    category: "tops",
+    styles: ["streetwear", "grunge"],
+    image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop",
+    colors: ["Black", "White", "Washed Grey"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Relaxed fit graphic tee with vintage-inspired print. Perfect for everyday wear.",
+    trending: true,
+  },
+  {
+    id: "t2",
+    name: "Ribbed Crop Tank",
+    price: 18,
+    category: "tops",
+    styles: ["y2k", "minimalist"],
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4b4357?w=400&h=500&fit=crop",
+    colors: ["White", "Black", "Brown", "Pink"],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Fitted ribbed crop tank top. Pairs great with high-waisted bottoms.",
+    newArrival: true,
+  },
+  {
+    id: "t3",
+    name: "Floral Lace Blouse",
+    price: 42,
+    category: "tops",
+    styles: ["cottagecore", "y2k"],
+    image: "https://images.unsplash.com/photo-1551489186-cf8726f514f8?w=400&h=500&fit=crop",
+    colors: ["Ivory", "Sage", "Dusty Rose"],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Delicate lace blouse with floral pattern and puffed sleeves.",
+    newArrival: true,
+  },
+  {
+    id: "t4",
+    name: "Polo Shirt",
+    price: 45,
+    category: "tops",
+    styles: ["preppy", "minimalist"],
+    image: "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=400&h=500&fit=crop",
+    colors: ["Navy", "White", "Green", "Pink"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Classic polo shirt in premium pique fabric. A wardrobe staple.",
+  },
+  {
+    id: "t5",
+    name: "Band Tee",
+    price: 25,
+    category: "tops",
+    styles: ["grunge", "streetwear"],
+    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop",
+    colors: ["Black", "Charcoal"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Vintage-washed band tee with distressed print. Soft and worn-in feel.",
+    trending: true,
+  },
+
+  // Bottoms
+  {
+    id: "b1",
+    name: "Low Rise Baggy Jeans",
+    price: 68,
+    category: "bottoms",
+    styles: ["y2k", "streetwear"],
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop",
+    colors: ["Light Wash", "Medium Wash", "Dark Wash"],
+    sizes: ["24", "25", "26", "27", "28", "29", "30"],
+    description: "90s-inspired low rise baggy jeans with a relaxed fit through the leg.",
+    trending: true,
+  },
+  {
+    id: "b2",
+    name: "Pleated Mini Skirt",
+    price: 35,
+    category: "bottoms",
+    styles: ["preppy", "y2k"],
+    image: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&h=500&fit=crop",
+    colors: ["Plaid", "Black", "Navy"],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Pleated mini skirt with zip closure. Pairs with everything.",
+    trending: true,
+  },
+  {
+    id: "b3",
+    name: "Linen Wide Leg Pants",
+    price: 55,
+    category: "bottoms",
+    styles: ["minimalist", "cottagecore"],
+    image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=500&fit=crop",
+    colors: ["Natural", "White", "Sage", "Terracotta"],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Breathable linen wide leg trousers with elastic waist and pockets.",
+    newArrival: true,
+  },
+  {
+    id: "b4",
+    name: "Cargo Pants",
+    price: 62,
+    category: "bottoms",
+    styles: ["streetwear", "grunge"],
+    image: "https://images.unsplash.com/photo-1590330297626-d7aff25a0431?w=400&h=500&fit=crop",
+    colors: ["Olive", "Black", "Khaki"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Relaxed cargo pants with multiple utility pockets. Functional and stylish.",
+  },
+
+  // Outerwear
+  {
+    id: "o1",
+    name: "Oversized Denim Jacket",
+    price: 85,
+    originalPrice: 110,
+    category: "outerwear",
+    styles: ["streetwear", "y2k", "grunge"],
+    image: "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=400&h=500&fit=crop",
+    colors: ["Light Wash", "Dark Wash"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Classic oversized denim jacket. Layer over anything for an effortless look.",
+    trending: true,
+  },
+  {
+    id: "o2",
+    name: "Cozy Knit Cardigan",
+    price: 58,
+    category: "outerwear",
+    styles: ["cottagecore", "preppy", "minimalist"],
+    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop",
+    colors: ["Cream", "Brown", "Dusty Lavender", "Forest Green"],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Chunky knit cardigan with oversized fit. Perfect for cozy layering.",
+    newArrival: true,
+  },
+  {
+    id: "o3",
+    name: "Track Jacket",
+    price: 72,
+    category: "outerwear",
+    styles: ["y2k", "streetwear"],
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop",
+    colors: ["Black/White", "Navy/Red", "Pink/Baby Blue"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Retro-inspired zip-up track jacket with contrast side stripes.",
+    trending: true,
+  },
+
+  // Dresses
+  {
+    id: "d1",
+    name: "Flowy Midi Dress",
+    price: 65,
+    category: "dresses",
+    styles: ["cottagecore", "minimalist"],
+    image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop",
+    colors: ["Floral Print", "Sage", "Ivory"],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Lightweight midi dress with floral print and smocked waist.",
+    newArrival: true,
+  },
+  {
+    id: "d2",
+    name: "Slip Dress",
+    price: 48,
+    originalPrice: 60,
+    category: "dresses",
+    styles: ["minimalist", "y2k"],
+    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=500&fit=crop",
+    colors: ["Black", "Champagne", "Sage"],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Satin slip dress with adjustable straps. Dress up or down.",
+    trending: true,
+  },
+
+  // Accessories
+  {
+    id: "a1",
+    name: "Y2K Shoulder Bag",
+    price: 38,
+    category: "accessories",
+    styles: ["y2k", "streetwear"],
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop",
+    colors: ["Silver", "Black", "Pink"],
+    sizes: ["One Size"],
+    description: "Mini shoulder bag with chain strap and quilted detail.",
+    trending: true,
+  },
+  {
+    id: "a2",
+    name: "Claw Clips Set",
+    price: 14,
+    category: "accessories",
+    styles: ["y2k", "cottagecore", "preppy"],
+    image: "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=400&h=500&fit=crop",
+    colors: ["Mixed Pastels", "Mixed Neutrals", "Mixed Bright"],
+    sizes: ["One Size"],
+    description: "Set of 6 assorted claw clips in trendy shapes and colors.",
+    newArrival: true,
+  },
+  {
+    id: "a3",
+    name: "Chunky Chain Necklace",
+    price: 22,
+    category: "accessories",
+    styles: ["streetwear", "y2k"],
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=500&fit=crop",
+    colors: ["Gold", "Silver"],
+    sizes: ["One Size"],
+    description: "Statement chunky chain necklace. Bold and versatile.",
+  },
+
+  // Shoes
+  {
+    id: "s1",
+    name: "Platform Sneakers",
+    price: 95,
+    category: "shoes",
+    styles: ["y2k", "streetwear"],
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop",
+    colors: ["White", "Black", "Chunky Multi"],
+    sizes: ["5", "6", "7", "8", "9", "10"],
+    description: "Chunky platform sneakers with exaggerated sole. Major statement piece.",
+    trending: true,
+  },
+  {
+    id: "s2",
+    name: "Mary Jane Flats",
+    price: 72,
+    category: "shoes",
+    styles: ["preppy", "cottagecore", "y2k"],
+    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=500&fit=crop",
+    colors: ["Black", "Brown", "White"],
+    sizes: ["5", "6", "7", "8", "9", "10"],
+    description: "Classic mary jane flats with round toe. Effortlessly chic.",
+    newArrival: true,
+  },
+  {
+    id: "s3",
+    name: "Lug Sole Boots",
+    price: 118,
+    originalPrice: 145,
+    category: "shoes",
+    styles: ["grunge", "streetwear"],
+    image: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=500&fit=crop",
+    colors: ["Black", "Dark Brown"],
+    sizes: ["5", "6", "7", "8", "9", "10"],
+    description: "Chunky lug sole ankle boots with side zip. Edgy and practical.",
+    trending: true,
+  },
+];
+
+export const styleDescriptions: Record<Style, { label: string; description: string; emoji: string }> = {
+  streetwear: {
+    label: "Streetwear",
+    description: "Bold graphics, oversized silhouettes, sneakers and cargo",
+    emoji: "🛹",
+  },
+  y2k: {
+    label: "Y2K",
+    description: "Low rise, shiny fabrics, mini skirts, and 2000s nostalgia",
+    emoji: "✨",
+  },
+  minimalist: {
+    label: "Minimalist",
+    description: "Clean lines, neutral palette, timeless basics",
+    emoji: "🤍",
+  },
+  cottagecore: {
+    label: "Cottagecore",
+    description: "Florals, linen, soft knits, and nature-inspired pieces",
+    emoji: "🌿",
+  },
+  preppy: {
+    label: "Preppy",
+    description: "Polo shirts, plaid, clean cuts, and classic styling",
+    emoji: "🎀",
+  },
+  grunge: {
+    label: "Grunge",
+    description: "Band tees, distressed denim, dark tones, and edge",
+    emoji: "🖤",
+  },
+};
